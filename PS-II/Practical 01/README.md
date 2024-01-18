@@ -1,4 +1,4 @@
-# Practical 01: Descriptive Statistics 
+# Practical 01: Descriptive Statistics
 
 ## Aim
 
@@ -8,8 +8,11 @@
 ## Datasets Used
 
 - <https://www.kaggle.com/datasets/leelatte/carscsv> - cars.csv
+    Columns: manufacturer, model, displ, year, cyl, trans, drv, cty, hwy, fl, class
 - <https://www.kaggle.com/uciml/iris> - iris.csv
+    columns: SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm, Species
 - <https://www.kaggle.com/datasets/ruiromanini/mtcars> - mtcars.csv
+    columns: mpg, cyl, disp, hp, drat, wt, qsec, vs, am, gear, carb
 
 ## Theory
 
