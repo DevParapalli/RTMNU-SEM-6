@@ -1,7 +1,7 @@
 # RTMNU-SEM-6
 
-## [Professional Skills Lab 2](./PS-II/README.md)
+## [Professional Skills Lab 2](./PS-II/)
 
-## [Compiler Design](./CD/README.md)
+## [Compiler Design](./CD/)
 
-## [Hardware Lab](./HWL/README.md)
+## [Hardware Lab](./HWL/)
