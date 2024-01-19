@@ -46,3 +46,7 @@ Flex is a tool that generates a lexical analyzer (scanner) from a set of regular
    ")" { return RPAREN; }
    %%
    ```
+
+## Practical Files List
+
+- [1.l](./1.l)
