@@ -3,7 +3,7 @@
 #include <stdio.h>
 %}
 %%
-(a|b)*abb {printf("Valid String: %s\n", yytext);}
+(a|b)*abb\n {printf("Valid String: %s", yytext);}
 %%
 int main()
 {
