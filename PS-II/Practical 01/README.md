@@ -2,7 +2,7 @@
 
 ## Aim
 
-- a. Write a program to find basic descriptive statistics using summary, str, quartile function on mtcars and cars datasets.
+- a. Write a program to find basic descriptive statistics using summary, str, quantile function on mtcars and cars datasets.
 - b. write an program to find subset of dataset by using subset, aggregate functions on iris dataset.
 
 ## Datasets Used
@@ -25,3 +25,12 @@ str(): Displays the structure of a dataset, revealing variable names, data types
 - `quantile()`: Computes specified quantiles (percentiles) of a numerical variable, such as quartiles that divide the data into four equal parts.
 - `subset()`: Creates a subset of a dataset based on specified conditions, extracting relevant portions for focused analysis.
 - `aggregate()`: Computes summary statistics for numerical variables within subgroups defined by factor variables, enabling group-level comparisons.
+
+## Practical Files
+
+- [a.py](./a.py)
+- [b.py](./b.py)
+- *[cars.csv](./cars.csv)
+- *[iris.csv](./iris.csv)
+- *[mtcars.csv](./mtcars.csv)
+- @[printed_code_output.pdf](./printed_code_output.pdf)

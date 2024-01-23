@@ -4,6 +4,11 @@
 
 Write a lex program to recognize valid strings using regular expression: `(a|b)*abb`
 
+## Test Cases
+
+- Valid: `abababb`, `abb`, `bbbabb`
+- Invalid: `baba`, `bba`, `bbb`, `ababba`
+
 ## Theory
 
 Regex are used to define patterns for matching specific sequences of characters in the input code, forming the foundation of lexical analysis, the first phase of a compiler.

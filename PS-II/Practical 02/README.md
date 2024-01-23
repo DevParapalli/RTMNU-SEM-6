@@ -23,3 +23,13 @@
 `requests` simplifies network communication tasks, particularly dealing with HTTP requests and fetching data from websites. Users can employ requests to download files, send POST requests, and manage cookies with ease. This library proves invaluable for downloading Excel files from online URLs, scraping data from websites, and interacting with APIs.
 
 `zipfile`, a built-in Python module, excels in handling ZIP archives. It empowers users to read, write, and extract files from ZIP containers. This functionality proves beneficial when downloading or storing multiple files efficiently, as ZIP files compress them for smaller size and optimized management.
+
+## Practical Files
+
+- [a.min.py](./a.min.py)
+- [a.py](./a.py)
+- [b.py](./b.py)
+- *[heart-disease.csv](./heart-disease.csv)
+- *[iris.csv](./iris.csv)
+- *[adhyaaya.xlsx](./adhyaaya.xlsx)
+- @[printed_code_output.pdf](./printed_code_output.pdf)
