@@ -19,7 +19,7 @@ Write a lex program to recognize tokens
 Token Rules for the Specified Tokens:
 
 Identifiers: `[a-zA-Z_][a-zA-Z_0-9]*\n` _According to C standard, identifiers begin with a letter or an underscore, but not with numbers_
-Decimal Integers: `[+-]?[1-9][0-9]*\n`
+Decimal Integers: `[+-]?[1-9][0-9]*\n|0\n`
 Octal Integers: `[+-]?0[0-7]+\n` _According to C standard, octal numbers begin with a 0._
 Hexadecimal Integers: `[+-]?0[xX][0-9a-fA-F]+\n`
 Floating Point Numbers: `[+-]?[0-9]*\.?[0-9]+\n`
