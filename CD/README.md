@@ -22,4 +22,5 @@ add `%option noyywrap` at top of flex file
 ## Practical List
 
 1. [Write a lex program to recognize valid strings using regular expression: `(a|b)*abb`](./Practical%2001/)
-2. [Practical 02](./Practical%2002/)
+2. [Write a lex program to recognize tokens](./Practical%2002/)
+3. [Write program to read lines from a file and analyze it lexically](./Practical%2003/)

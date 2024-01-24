@@ -17,9 +17,9 @@
 
 ### Key Functions
 
-- `boxplot()`: Creates a box-and-whisker plot to visualize the distribution of a numerical variable.
-- `scatterplot()`: Creates a scatter plot to visualize the relationship between two numerical variables.
-- `plot()`: Creates a line plot to visualize the relationship between two numerical variables.
-- `histogram()`: Creates a histogram to visualize the distribution of a numerical variable.
-- `barplot()`: Creates a bar chart to visualize the distribution of a categorical variable.
-- `pie()`: Creates a pie chart to visualize the distribution of a categorical variable.
+- `plt.boxplot`: Creates a box-and-whisker plot to visualize the distribution of a numerical variable.
+- `plt.scatter`: Creates a scatter plot to visualize the relationship between two numerical variables.
+- `plt.plot`: Creates a line plot to visualize the relationship between two numerical variables.
+- `plt.hist`: Creates a histogram to visualize the distribution of a numerical variable.
+- `plt.bar`: Creates a bar chart to visualize the distribution of a categorical variable.
+- `plt.pie`: Creates a pie chart to visualize the distribution of a categorical variable.

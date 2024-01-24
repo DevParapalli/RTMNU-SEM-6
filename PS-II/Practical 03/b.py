@@ -16,5 +16,3 @@ virginica = dataset[dataset["Species"] == "Iris-virginica"]
 plt.scatter(dataset["SepalLengthCm"], dataset["SepalWidthCm"], color="black", label="All")
 
 plt.show()
-
-# Save the scatter plot as output
