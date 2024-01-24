@@ -17,5 +17,6 @@ Write a program to read constants as a string and convert it to number.
 - [3.l](./3.l)
 - [input.txt](./input.txt)
 - *[3.c](./3.c) _Used to develop functions for use in 3.l_
+- @[printed_output.txt](./printed_output.pdf)
 
 `flex 3.l && gcc lex.yy.c -o 3.exe && ./3.exe input.txt`

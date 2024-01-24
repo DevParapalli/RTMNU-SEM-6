@@ -23,3 +23,14 @@
 - `plt.hist`: Creates a histogram to visualize the distribution of a numerical variable.
 - `plt.bar`: Creates a bar chart to visualize the distribution of a categorical variable.
 - `plt.pie`: Creates a pie chart to visualize the distribution of a categorical variable.
+
+## Practical Files
+
+- [a.py](./a.py) - Box and scatter plot
+- [b.py](./b.py) - Outliers
+- [c.py](./c.py) - Histogram, barchart and pie chart
+- *[iris.csv](./iris.csv)
+- @[a.png](./a.png)
+- @[b.png](./b.png)
+- @[c.png](./c.png)
+- @[printed_output.pdf](./printed_output.pdf)
