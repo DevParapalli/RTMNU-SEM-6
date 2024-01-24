@@ -12,6 +12,25 @@ Write a program to read constants as a string and convert it to number.
 
 ## Theory
 
+Identifiers: `[a-zA-Z_][a-zA-Z_0-9]*\n` _According to C standard, identifiers begin with a letter or an underscore, but not with numbers_
+Decimal Integers: `[+-]?[1-9][0-9]*\n|0\n`
+Octal Integers: `[+-]?0[0-7]+\n` _According to C standard, octal numbers begin with a 0._
+Hexadecimal Integers: `[+-]?0[xX][0-9a-fA-F]+\n`
+Floating Point Numbers: `[+-]?[0-9]*\.?[0-9]+\n`
+Exponential Numbers: `[+-]?[0-9]*\.?[0-9]+([eE][+-]?[0-9]+)+\n`
+
+Built In Functions (string.h)
+
+1. strtof - string to float
+2. strtol - string to long
+
+User Defined Functions:
+
+1. _strtoexp - string to exponential
+2. _strtoo - string to octal
+3. _strtoh - string to hexadecimal
+4. _strtod - string to decimal
+
 ## Practical Files
 
 - [3.l](./3.l)

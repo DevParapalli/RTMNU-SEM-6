@@ -8,6 +8,7 @@
 ## Usage instructions
 
 add `%option noyywrap` at top of flex file
+`noyywrap` terminates lex after EOF of 1 file has been reached
 
 - only flex
   - `flex <filename>.l`
@@ -18,6 +19,7 @@ add `%option noyywrap` at top of flex file
   - `bison -d <filename>.y`
   - `gcc lex.yy.c <filename>.tab.c -lfl`
 
+- templated lex file : [template.l](./template.l)
 
 ## Practical List
 
