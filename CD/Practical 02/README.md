@@ -28,3 +28,4 @@ Exponential Numbers: `[+-]?[0-9]*\.?[0-9]+([eE][+-]?[0-9]+)+\n`
 ## Practical Files List
 
 - [2.l](./2.l)
+- @[printed_output.pdf](./printed_output.pdf)

@@ -55,3 +55,4 @@ Flex is a tool that generates a lexical analyzer (scanner) from a set of regular
 ## Practical Files List
 
 - [1.l](./1.l)
+- @[printed_code_output.pdf](./printed_code_output.pdf)
