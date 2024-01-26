@@ -33,4 +33,4 @@
 - @[a.png](./a.png)
 - @[b.png](./b.png)
 - @[c.png](./c.png)
-- @[printed_output.pdf](./printed_output.pdf)
+- @[printed_code_output.pdf](./printed_code_output.pdf)
