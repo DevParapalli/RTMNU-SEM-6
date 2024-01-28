@@ -30,3 +30,7 @@ add `%option noyywrap` at top of flex file
 ## Useful Links
 
 - <http://alumni.cs.ucr.edu/~lgao/teaching/bison.html>
+
+## Practical Files
+
+- [Index Format.pdf](./Index%20Format.pdf)
