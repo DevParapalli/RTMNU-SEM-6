@@ -1,4 +1,4 @@
-# Professional Skills Leb - II
+# Professional Skills Lab - II
 
 ## Practical List
 
