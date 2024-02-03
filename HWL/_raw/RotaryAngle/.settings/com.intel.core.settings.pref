@@ -1,0 +1,5 @@
+#
+#Fri Jan 05 14:49:37 IST 2018
+com.intel.core.project.type.id="com.intel.iotdevkit.cdt.iotCDTNature"
+com.intel.core.target.selection="mama"
+com.intel.core.project.description="IoT"

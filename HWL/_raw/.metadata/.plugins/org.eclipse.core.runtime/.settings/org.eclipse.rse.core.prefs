@@ -1,0 +1,4 @@
+com.intel.iotdevkit.targets.system.type.systemType.defaultUserId=root
+eclipse.preferences.version=1
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=iot
+useridperkey=iot.MyConn1\=root;iot.MyConn\=root;iot.mama\=root;iot.Local\=iot;

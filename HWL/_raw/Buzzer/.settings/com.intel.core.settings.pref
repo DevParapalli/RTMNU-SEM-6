@@ -1,0 +1,5 @@
+#
+#Tue Feb 21 14:02:46 IST 2023
+com.intel.core.project.type.id="com.intel.iotdevkit.cdt.iotCDTNature"
+com.intel.core.target.selection="MyConn1"
+com.intel.core.project.description="IoT"

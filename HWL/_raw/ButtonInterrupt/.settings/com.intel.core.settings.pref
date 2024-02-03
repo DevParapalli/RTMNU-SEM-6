@@ -1,0 +1,5 @@
+#
+#Tue Apr 18 14:52:43 IST 2017
+com.intel.core.project.type.id="com.intel.iotdevkit.cdt.iotCDTNature"
+com.intel.core.target.selection="myconn"
+com.intel.core.project.description="IoT"
