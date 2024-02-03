@@ -12,3 +12,9 @@
 
 - [Hardware Lab.pdf](./Hardware%20Lab.pdf)
 - [Index Format.pdf](./Index%20Format.pdf)
+
+## Further Instruction
+
+raw code is available inside of the `_raw` directory.
+Practical-wise files are attached above.
+`mraa.h` header is included here only for info purposes, the code doesn't compile, only shown here for writing purposes.
