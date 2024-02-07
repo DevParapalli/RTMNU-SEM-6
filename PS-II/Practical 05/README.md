@@ -16,7 +16,6 @@ Import a data from web storage. Name the dataset and now do Logistic Regression 
 
 - <https://www.kaggle.com/code/naishalthakkar/gre-dataset-analysis/input>
 
-
 ## Theory
 
 Logistic regression is a statistical model commonly used in regression analysis, particularly for binary classification problems. It is a supervised learning model. In this model, the log-odds of an event are expressed as a linear combination of independent variables. The binary dependent variable takes on values "0" and "1," representing the absence or presence of an event. Independent variables can be either binary or continuous.
@@ -34,3 +33,4 @@ where $p(x)$ is the probability of the event occurring, $x$ is the independent v
 - [a.py](./a.py)
 - @[a.png](./a.png)
 - *[admissions-predict.csv](./admissions-predict.csv)
+- @[printed_code_output.pdf](./printed_code_output.pdf)
