@@ -47,3 +47,10 @@ For elimination of indirect left recursion, convert to direct left recursion, an
 
 - <https://www.csd.uwo.ca/~mmorenom/CS447/Lectures/Syntax.html/node8.html>
 - <https://www.geeksforgeeks.org/removing-direct-and-indirect-left-recursion-in-a-grammar/>
+
+## Practical Files
+
+- [4.c](./4.c)
+- *[4.py](./4.py) _Used for exploratory research. Not required for running `4.c`_
+- @[code.pdf](./code.pdf)
+- @[output.pdf](./output.pdf)
