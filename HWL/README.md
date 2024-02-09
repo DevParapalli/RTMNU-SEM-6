@@ -8,6 +8,11 @@
 - <https://www.intel.com/content/dam/www/public/us/en/documents/release-notes/galileo-sw-release-notes.pdf>
 - <https://lisha.ufsc.br/teaching/mpl/exercises/acessingbash.html>
 
+## Practical List
+
+- [Practical 1](./Practical%201/README.md)
+- [Practical 2](./Practical%202/README.md)
+
 ## Practical Files
 
 - [Hardware Lab.pdf](./Hardware%20Lab.pdf)
