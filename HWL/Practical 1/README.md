@@ -8,7 +8,7 @@ Study of IOT 3500 Development Kit and Familiarization with Intel Galileo board a
 
 ## PROGRAM
 
-
+None
 
 ## CONCLUSION
 

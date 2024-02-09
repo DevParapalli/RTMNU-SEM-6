@@ -22,7 +22,7 @@ int main()
 		sleep(1);
 		printf("LED ON\n");
 		mraa_gpio_write(d_pin, 1);
-		sleep(10);
+		sleep(1);
 	}
 
 	return MRAA_SUCCESS;

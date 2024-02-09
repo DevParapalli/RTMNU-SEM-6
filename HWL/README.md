@@ -10,8 +10,9 @@
 
 ## Practical List
 
-- [Practical 1](./Practical%201/README.md)
-- [Practical 2](./Practical%202/README.md)
+- [1. Study of ...](./Practical%201/README.md)
+- [2. LED Blinky](./Practical%202/README.md)
+- [3. ButtonLED](./Practical%203/README.md)
 
 ## Practical Files
 
