@@ -1,43 +1,31 @@
-# EXPERIMENT NO 2
-
-## AIM
-
-To interface LED with Galileo board and program it to blink with 1 second interval.
-
-## PROCEDURE
-
-## PROGRAM
-
-```cpp
 #include "mraa.h"
 #include <stdio.h>
+#include <unistd.h>
+
+#define BUTTON_PIN 2
+#define LED_PIN 3
 
 int main()
 {
-    mraa_gpio_context d_pin = NULL;
-    d_pin = mraa_gpio_init(13);
+    mraa.init();
+    mraa_gpio_context button = mraa_gpio_init(BUTTON_PIN);
+    mraa_gpio_dir(button, MRAA_GPIO_IN);
 
-    if (d_pin == NULL) {
-        fprintf(stderr, "MRAA couldn't initialize GPIO, exiting");
-        return MRAA_ERROR_UNSPECIFIED;
+    mraa_gpio_context led = mraa_gpio_init(LED_PIN);
+    mraa_gpio_dir(led, MRAA_GPIO_OUT);
+
+    while(1) {
+        if (mraa_gpio_read(button)) {
+            mraa_gpio_write(led, 1);
+        } else {
+            mraa_gpio_write(led, 0);
+        }
+        usleep(100000);
     }
 
-    if (mraa_gpio_dir(d_pin, MRAA_GPIO_OUT) != MRAA_SUCCESS) {
-        fprintf(stderr, "Can't set digital pin as output, exiting");
-        return MRAA_ERROR_UNSPECIFIED;
-    };
-
-    for (int i=10;i>0;i--) {
-        printf("LED OFF\n");
-        mraa_gpio_write(d_pin, 0);
-        sleep(1);
-        printf("LED ON\n");
-        mraa_gpio_write(d_pin, 1);
-        sleep(1);
-    }
-
+    mraa_gpio_close(led);
+    mraa_gpio_close(button);
+    mraa_deinit();
+    
     return MRAA_SUCCESS;
 }
-```
-
-## CONCLUSION

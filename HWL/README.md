@@ -7,6 +7,7 @@
 - <https://learn.sparkfun.com/tutorials/galileo-getting-started-guide/all>
 - <https://www.intel.com/content/dam/www/public/us/en/documents/release-notes/galileo-sw-release-notes.pdf>
 - <https://lisha.ufsc.br/teaching/mpl/exercises/acessingbash.html>
+- <https://github.com/JelleRoets/cross-compile-edison>
 
 ## Practical List
 
@@ -17,6 +18,7 @@
 ## Practical Files
 
 - [Hardware Lab.pdf](./Hardware%20Lab.pdf)
+- [Hardware Lab - dark.pdf](./Hardware%20Lab%20-%20dark.pdf)
 - [Index Format.pdf](./Index%20Format.pdf)
 
 ## Further Instruction
