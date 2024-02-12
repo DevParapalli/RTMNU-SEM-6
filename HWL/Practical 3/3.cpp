@@ -7,19 +7,16 @@
 
 int main()
 {
-    mraa.init();
+    mraa_init();
     mraa_gpio_context button = mraa_gpio_init(BUTTON_PIN);
     mraa_gpio_dir(button, MRAA_GPIO_IN);
 
     mraa_gpio_context led = mraa_gpio_init(LED_PIN);
     mraa_gpio_dir(led, MRAA_GPIO_OUT);
 
-    while(1) {
-        if (mraa_gpio_read(button)) {
-            mraa_gpio_write(led, 1);
-        } else {
-            mraa_gpio_write(led, 0);
-        }
+    for(;;) {
+        if (mraa_gpio_read(button)) mraa_gpio_write(led, 1);
+        else mraa_gpio_write(led, 0);
         usleep(100000);
     }
 

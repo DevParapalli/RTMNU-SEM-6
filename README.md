@@ -5,3 +5,5 @@
 ## [Compiler Design](./CD/)
 
 ## [Hardware Lab](./HWL/)
+
+## [Machine Learning](./MachineLearning.md)

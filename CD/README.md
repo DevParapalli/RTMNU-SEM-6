@@ -1,5 +1,7 @@
 # Compiler Design
 
+## [Notes](./NOTES.md)
+
 ## Tools Required
 
 - Flex: <https://gnuwin32.sourceforge.net/packages/flex.htm>

@@ -25,7 +25,7 @@ To interface push button and LED with Intel Galileo board and write program to t
 
 int main()
 {
-    mraa.init();
+    mraa_init();
     mraa_gpio_context button = mraa_gpio_init(BUTTON_PIN);
     mraa_gpio_dir(button, MRAA_GPIO_IN);
 
@@ -33,11 +33,8 @@ int main()
     mraa_gpio_dir(led, MRAA_GPIO_OUT);
 
     for(;;) {
-        if (mraa_gpio_read(button)) {
-            mraa_gpio_write(led, 1);
-        } else {
-            mraa_gpio_write(led, 0);
-        }
+        if (mraa_gpio_read(button)) mraa_gpio_write(led, 1);
+        else mraa_gpio_write(led, 0);
         usleep(100000);
     }
 
