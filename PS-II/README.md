@@ -7,6 +7,7 @@
 3. [Visualizations](./Practical%2003/)
 4. [Correlation and Covariance](./Practical%2004/)
 5. [Regression Model](./Practical%2005/)
+6. [Multiple Regression Model](./Practical%2006/)
 
 ## Practical Files
 
