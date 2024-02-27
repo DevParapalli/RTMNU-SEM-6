@@ -10,7 +10,7 @@ Multiple linear regression (MLR), also known simply as multiple regression, is a
 
 $$ y_i = \beta_0 + \beta_1 x_i1 + \beta_2 x_i2 ... + \epsilon $$
 
-where for $i = n$ observations: 
+where for $i = n$ observations:
 
 - $y_i$ is the dependent variable
 - $\beta_0$ is the y-intercept

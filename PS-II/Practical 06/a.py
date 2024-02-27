@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import pathlib as pl
+import seaborn as sns
 import os
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
@@ -33,6 +34,7 @@ predictions = model.predict(X_test)
 
 print("-----------------------\nLinear Regression Model\n-----------------------")
 print("Coefficients:\n\t|", "\n\t|".join([f"{X.columns[i].strip():17}:\t{model.coef_[i]:.8f}" for i in range(len(X.columns))]))
+print(pd.DataFrame({'Actual': predictions, 'Predicted': Y_test, 'Error': abs(predictions - Y_test)}))
 print("Mean Absolute Error: ", mean_absolute_error(Y_test, predictions))
 print("Mean Squared Error: ", mean_squared_error(Y_test, predictions))
 print("Root Mean Squared Error: ", np.sqrt(mean_squared_error(Y_test, predictions)))

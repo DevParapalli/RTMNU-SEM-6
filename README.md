@@ -6,4 +6,4 @@
 
 ## [Hardware Lab](./HWL/)
 
-## [Machine Learning](./MachineLearning.md)
+## [Machine Learning](./ML/)
