@@ -34,6 +34,7 @@ add `%option noyywrap` at top of flex file
 ## Useful Links
 
 - <http://alumni.cs.ucr.edu/~lgao/teaching/bison.html>
+- <https://www.cs.utexas.edu/users/novak/yaccpaper.htm> -- Check the solution for the parsing in LR 0 parsers.
 
 ## Practical Files
 
