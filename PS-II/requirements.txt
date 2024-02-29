@@ -1,2 +1,7 @@
 pandas
+numpy
 requests
+seaborn
+matplotlib
+scikit-learn
+pyarrow
