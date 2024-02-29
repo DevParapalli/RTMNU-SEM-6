@@ -28,6 +28,10 @@ $$ p(x) = \frac{1}{1+e^{-(x-\mu)/s}} $$
 
 where $p(x)$ is the probability of the event occurring, $x$ is the independent variable, $\mu$ is the location parameter (midpoint of curve, where $p(u) = 1/2$ ), and $s$ is the scale parameter.
 
+## Output Images
+
+![a.png](./a.png)
+
 ## Practical Files Used
 
 - [a.py](./a.py)

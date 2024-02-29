@@ -8,6 +8,9 @@
 4. [Correlation and Covariance](./Practical%2004/)
 5. [Regression Model](./Practical%2005/)
 6. [Multiple Regression Model](./Practical%2006/)
+7. [Classification Model](./Practical%2007/)
+8. [Clustering Model](./Practical%2008/)
+9. [K-Nearest Neighbour](./Practical%2009/)
 
 ## Practical Files
 

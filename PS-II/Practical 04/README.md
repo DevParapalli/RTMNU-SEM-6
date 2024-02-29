@@ -27,6 +27,10 @@ ANOVA (Analysis of Variance) is a statistical method used to analyze the differe
 - `sns.heatmap()`: This Seaborn function creates a heatmap of the correlation matrix. The `annot=True` parameter adds numerical annotations to each cell. The `cmap='coolwarm'` parameter sets the color map, and `fmt=".2f"` formats the annotations to display two decimal places.
 - `f_oneway()`: This function from the `scipy.stats` module performs a one-way ANOVA test. It takes multiple arrays (or groups) as arguments, each representing a different category, and returns an ANOVA result object. In the example, it's applied to compare means of the numerical variable for different categories.
 
+## Output Images
+
+![b.png](./b.png)
+
 ## Practical Files
 
 - [a.py](./a.py) - Correlation matrix

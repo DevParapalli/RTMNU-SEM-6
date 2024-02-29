@@ -24,6 +24,12 @@
 - `plt.bar`: Creates a bar chart to visualize the distribution of a categorical variable.
 - `plt.pie`: Creates a pie chart to visualize the distribution of a categorical variable.
 
+## Output Images
+
+![a.png](./a.png)
+![b.png](./b.png)
+![c.png](./c.png)
+
 ## Practical Files
 
 - [a.py](./a.py) - Box and scatter plot

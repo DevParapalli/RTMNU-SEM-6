@@ -17,3 +17,13 @@ where for $i = n$ observations:
 - $\beta_1$ is the slope of the first independent variable
 - $x_i$ are the explanatory variables
 - $\epsilon$ is the error term
+
+## Output Images
+
+![a.png](./a.png)
+
+## Practical Files
+
+- [a.py](./a.py)
+- @[a.png](./a.png)
+- *[admissions-predict.csv](./admissions-predict.csv)
