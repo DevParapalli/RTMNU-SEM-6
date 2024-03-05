@@ -48,7 +48,7 @@
 #include <jhd1313m1.h>
 
 /*for
-	lcd->setCursor();
+    lcd->setCursor();
     lcd->write();
     lcd->setCursor();
     lcd->setColor();
@@ -75,7 +75,7 @@
 #include <stdio.h>
 
 /* Local Includes */
-#include "colors.h"	// for predefined color values
+#include "colors.h"    // for predefined color values
 
 //=============================================================================
 
@@ -86,11 +86,11 @@
 void buttonISR (void*);
 
 int screen_update(
-		float,
-		int,
-		struct color,
-		int
-		);
+        float,
+        int,
+        struct color,
+        int
+        );
 
 int screen_welcome();
 //=============================================================================
@@ -127,22 +127,22 @@ upm::Buzzer* buzz;
 int screen_welcome()
 {
 
-	std::stringstream row_1, row_2; // LCD rows
+    std::stringstream row_1, row_2; // LCD rows
 
-	row_1 << "Hi, Press button" ;
-	row_2 << "to update Light." ;
+    row_1 << "Hi, Press button" ;
+    row_2 << "to update Light." ;
 
 
-	//display on LCD
-	lcd->clear();
-	lcd->setColor(col.r, col.g, col.b);
-	//display row 1
-	lcd->setCursor(0,0);
-	lcd->write(row_1.str());
+    //display on LCD
+    lcd->clear();
+    lcd->setColor(col.r, col.g, col.b);
+    //display row 1
+    lcd->setCursor(0,0);
+    lcd->write(row_1.str());
 
-	//display row 2
-	lcd->setCursor(1,0);
-	lcd->write(row_2.str());
+    //display row 2
+    lcd->setCursor(1,0);
+    lcd->write(row_2.str());
 
 return 1;
 }
@@ -172,24 +172,24 @@ return 1;
 int screen_exit()
 {
 
-	std::stringstream row_1, row_2; // LCD rows
+    std::stringstream row_1, row_2; // LCD rows
 
-	row_1 << "5 chances over.." ;
-	row_2 << "Bye Bye !" ;
+    row_1 << "5 chances over.." ;
+    row_2 << "Bye Bye !" ;
 
 
-	//display on LCD
-	lcd->clear();
-	lcd->setColor(col.r, col.g, col.b);
-	//display row 1
-	lcd->setCursor(0,0);
-	lcd->write(row_1.str());
+    //display on LCD
+    lcd->clear();
+    lcd->setColor(col.r, col.g, col.b);
+    //display row 1
+    lcd->setCursor(0,0);
+    lcd->write(row_1.str());
 
-	//display row 2
-	lcd->setCursor(1,0);
-	lcd->write(row_2.str());
+    //display row 2
+    lcd->setCursor(1,0);
+    lcd->write(row_2.str());
 
-	sleep(3);
+    sleep(3);
 
 return 1;
 }
@@ -217,35 +217,35 @@ return 1;
  */
 
 int screen_update(
-		float light_raw,
-		int light_lux,
-		struct color col,
-		int verbose
-		){
+        float light_raw,
+        int light_lux,
+        struct color col,
+        int verbose
+        ){
 
-	std::stringstream row_1, row_2; // LCD rows
+    std::stringstream row_1, row_2; // LCD rows
 
-	if (verbose){
-		printf("Light Raw = %f\n", light_raw);
-		printf("Light Lux = %d\n", light_lux);
-	}
+    if (verbose){
+        printf("Light Raw = %f\n", light_raw);
+        printf("Light Lux = %d\n", light_lux);
+    }
 
-	row_1 << "Light Raw  " << std::setprecision(4) << light_raw;
-	row_2 << "Light Lux  " << std::setprecision(4) << light_lux;
+    row_1 << "Light Raw  " << std::setprecision(4) << light_raw;
+    row_2 << "Light Lux  " << std::setprecision(4) << light_lux;
 
 
-	//display on LCD
-	lcd->clear();
-	lcd->setColor(col.r, col.g, col.b);
-	//display row 1
-	lcd->setCursor(0,0);
-	lcd->write(row_1.str());
+    //display on LCD
+    lcd->clear();
+    lcd->setColor(col.r, col.g, col.b);
+    //display row 1
+    lcd->setCursor(0,0);
+    lcd->write(row_1.str());
 
-	//display row 2
-	lcd->setCursor(1,0);
-	lcd->write(row_2.str());
+    //display row 2
+    lcd->setCursor(1,0);
+    lcd->write(row_2.str());
 
-	buzz->playSound(1000, 50000);
+    buzz->playSound(1000, 50000);
 
 return 1;
 }
@@ -277,15 +277,15 @@ return 1;
 
 void buttonISR(void*)
 {
-	count++; //1. update count
-	//printf("\nHello World from ISR %d", count);
-	//fflush(stdout);
+    count++; //1. update count
+    //printf("\nHello World from ISR %d", count);
+    //fflush(stdout);
 
-	//2. toggle color between yellow and green
-	col = i ? green: yellow; i= i ? 0:1;
+    //2. toggle color between yellow and green
+    col = i ? green: yellow; i= i ? 0:1;
 
     //3. Get light sensor values and update screen
-	printf("Button pressed, read light sensor and update screen\n");
+    printf("Button pressed, read light sensor and update screen\n");
     screen_update(light_sensor->raw_value(), light_sensor->value(), col, 0);
 }
 
@@ -321,11 +321,11 @@ void buttonISR(void*)
 int main(void)
 {
     //Init Light sensor
-	  // Create the light sensor object using AIO pin 0
-	 light_sensor = new upm::GroveLight(0);
+      // Create the light sensor object using AIO pin 0
+     light_sensor = new upm::GroveLight(0);
 
-	//Init LCD
-	// 0x62 RGB_ADDRESS, 0x3E LCD_ADDRESS
+    //Init LCD
+    // 0x62 RGB_ADDRESS, 0x3E LCD_ADDRESS
     lcd = new upm::Jhd1313m1(0, 0x3E, 0x62); //Create lcd instance
 
     // Create the button object using GPIO pin 4
@@ -349,7 +349,7 @@ int main(void)
     sleep(1);
 
     delete button;
-    delete lcd;	//free up memory
+    delete lcd;    //free up memory
     delete light_sensor;
     delete buzz;
 

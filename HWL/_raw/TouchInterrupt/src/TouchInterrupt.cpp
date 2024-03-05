@@ -56,9 +56,9 @@ int count = 3;
 
 void touchISR(void*)
 {
-	count--;
-	printf("\nHello World from ISR, will exit after %d touch events", count);
-	fflush(stdout);
+    count--;
+    printf("\nHello World from ISR, will exit after %d touch events", count);
+    fflush(stdout);
 }
 
 /**
@@ -93,8 +93,8 @@ int main()
 
     touch->installISR(mraa::EDGE_FALLING, &touchISR, NULL);
 
-	printf("\nWelcome, waiting for touch event.\nWill exit after 5 events");
-	fflush(stdout);
+    printf("\nWelcome, waiting for touch event.\nWill exit after 5 events");
+    fflush(stdout);
 
     while(count>0);
 

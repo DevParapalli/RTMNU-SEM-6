@@ -62,16 +62,16 @@ int main()
 
     while( count > 0 ) {
 
-    	button_val = button->value(); //read button value and store to local variable
-    	printf ("Program will exit after %d button presses\n", count);
-    	printf ("Button value is: %d\n ", button_val);
+        button_val = button->value(); //read button value and store to local variable
+        printf ("Program will exit after %d button presses\n", count);
+        printf ("Button value is: %d\n ", button_val);
 
         if (button_val)
-        	count--;
+            count--;
 
         usleep(500000); //0.5 second
     }
-	printf ("Exiting, bbye!");
+    printf ("Exiting, bbye!");
     // Delete the button object
     delete button;
 }

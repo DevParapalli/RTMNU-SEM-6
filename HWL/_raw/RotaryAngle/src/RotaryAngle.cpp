@@ -52,8 +52,8 @@
 
 int main()
 {
-	  // Instantiate a rotary sensor on analog pin A1
-	    upm::GroveRotary* knob = new upm::GroveRotary(1);
+      // Instantiate a rotary sensor on analog pin A1
+        upm::GroveRotary* knob = new upm::GroveRotary(1);
     // Read the input and print, waiting one second between readings
     while( 1 ) {
             float abs_value = knob->abs_value(); // Absolute raw value

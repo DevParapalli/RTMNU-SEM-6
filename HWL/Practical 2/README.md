@@ -6,6 +6,13 @@ To interface LED with Galileo board and program it to blink with 1 second interv
 
 ## PROCEDURE
 
+1. Pin 13 is connected to onboard LED.
+2. Connect the Galileo board to the computer using USB cable.
+3. Use screen tool to connect the Galileo board to wifi and note its IP
+4. Connect to Galileo board using Eclipse IDE.
+5. Write a program to blink LED with 1 second interval.
+6. Compile and run the program on Galileo board as target.
+
 ## PROGRAM
 
 ```cpp

@@ -59,9 +59,9 @@ int count = 0;
 
 void buttonISR(void*)
 {
-	count++;
-	printf("\nHello World from ISR, count = %d \n", count);
-	fflush(stdout);
+    count++;
+    printf("\nHello World from ISR, count = %d \n", count);
+    fflush(stdout);
 
 }
 

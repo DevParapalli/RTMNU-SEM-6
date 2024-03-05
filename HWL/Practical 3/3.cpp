@@ -3,7 +3,7 @@
 #include <unistd.h>
 
 #define BUTTON_PIN 2
-#define LED_PIN 3
+#define LED_PIN 13
 
 int main()
 {

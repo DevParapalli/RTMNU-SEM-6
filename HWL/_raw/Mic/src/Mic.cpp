@@ -32,9 +32,9 @@
 #include <sys/time.h>
 
 int is_running = 1;
-uint16_t buffer [128];	//define buffer to store captures values
+uint16_t buffer [128];    //define buffer to store captures values
 
-upm::Microphone *mic = NULL;	//create microphone object
+upm::Microphone *mic = NULL;    //create microphone object
 
 /**
  * @brief sig_handler is the routine to catch kill signal events
@@ -98,7 +98,7 @@ int main(int argc, char **argv)
     mic = new upm::Microphone(0);
 
     if (signal(SIGINT, sig_handler) == SIG_ERR)
-    	  printf("\ncan't catch SIGINT\n");
+          printf("\ncan't catch SIGINT\n");
 
     thresholdContext ctx;
     ctx.averageReading = 0;

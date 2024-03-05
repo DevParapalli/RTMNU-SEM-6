@@ -63,28 +63,28 @@
 
 int main()
 {
-	upm::ES08A *servo = new upm::ES08A(5);
+    upm::ES08A *servo = new upm::ES08A(5);
 
-	// Sets the shaft to 180, then to 90, then to 0,
-	// then back to 90, and finally back to 180,
-	// pausing for a second in between each angle
-	servo->setAngle (30);
-	printf("Set angle to 180\n");
+    // Sets the shaft to 180, then to 90, then to 0,
+    // then back to 90, and finally back to 180,
+    // pausing for a second in between each angle
+    servo->setAngle (30);
+    printf("Set angle to 180\n");
 
-	sleep(1);
+    sleep(1);
 
-	servo->setAngle (60);
-	printf("Set angle to 90\n");
+    servo->setAngle (60);
+    printf("Set angle to 90\n");
 
-	sleep(1);
+    sleep(1);
 
-	servo->setAngle (90);
-	printf("Set angle to 0\n");
+    servo->setAngle (90);
+    printf("Set angle to 0\n");
 
-	sleep(1);
+    sleep(1);
 
-	servo->setAngle (120);
-	printf("Set angle to 90\n");
+    servo->setAngle (120);
+    printf("Set angle to 90\n");
 
     sleep(1);
 

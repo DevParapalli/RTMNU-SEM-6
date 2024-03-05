@@ -31,7 +31,7 @@
 #include "jhd1313m1.h"
 
 /*for
-	lcd->setCursor();
+    lcd->setCursor();
     lcd->write();
     lcd->setCursor();
     lcd->setColor();
@@ -71,16 +71,16 @@
 int main(void)
 {
     // 0x62 RGB_ADDRESS, 0x3E LCD_ADDRESS
-	upm::Jhd1313m1 *lcd;
+    upm::Jhd1313m1 *lcd;
     lcd = new upm::Jhd1313m1(0, 0x3E, 0x62); //Create lcd instance
     //arguments: I2C addresses of LCD controller and LED backlight controller
 
     printf("Display text on LCD\n");
 
-    lcd->setCursor(0,0);	//bring cursor to top left corner
-    lcd->write("Hello world");	//print text
-    lcd->setCursor(2,2);	//bring cursor to second row
-    lcd->write("");	//print text
+    lcd->setCursor(0,0);    //bring cursor to top left corner
+    lcd->write("Hello world");    //print text
+    lcd->setCursor(2,2);    //bring cursor to second row
+    lcd->write("");    //print text
 
     printf("Sleeping for 5 seconds\n");
     sleep(3);
@@ -88,16 +88,16 @@ int main(void)
 
     //Run loop for toggling backlight color between Red->Green->Blue x 5 times
     for (int i = 3; i>0 ;i--){
-    lcd->setColor(255,0,0);	//set backlight color to Red
+    lcd->setColor(255,0,0);    //set backlight color to Red
     sleep(1);
-    lcd->setColor(0,255,0);	//set backlight color to Green
+    lcd->setColor(0,255,0);    //set backlight color to Green
     sleep(1);
-    lcd->setColor(0,0,255);	//set backlight color to Blue
+    lcd->setColor(0,0,255);    //set backlight color to Blue
     sleep(1);
     }
 
     printf("Exiting .. bbye!\n");
 
-    delete lcd;	//free up memory.
+    delete lcd;    //free up memory.
     return 0;
 }

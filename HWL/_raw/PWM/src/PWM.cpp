@@ -49,40 +49,40 @@
  */
 
 int main(){
-	 mraa_pwm_context pwm;
-	 pwm = mraa_pwm_init(3);
+     mraa_pwm_context pwm;
+     pwm = mraa_pwm_init(3);
 
-	 if (pwm == NULL) {
-	        return 1;
-	    }
+     if (pwm == NULL) {
+            return 1;
+        }
 
-	 mraa_pwm_period_us(pwm, 1);
-	 mraa_pwm_enable(pwm, 1);
-	 //Note: once enabled, PWM signal will continue to be generated until disabled,
-	 //even if program exits without disabling it. So make sure to disable it.
+     mraa_pwm_period_us(pwm, 1);
+     mraa_pwm_enable(pwm, 1);
+     //Note: once enabled, PWM signal will continue to be generated until disabled,
+     //even if program exits without disabling it. So make sure to disable it.
 
-	 printf("PWM signal ON\n");
-	 float value = 0.0f;
-	 //mraa_pwm_write(pwm, 0.5); //generate 50% duty cycle
+     printf("PWM signal ON\n");
+     float value = 0.0f;
+     //mraa_pwm_write(pwm, 0.5); //generate 50% duty cycle
 
-	 //Loop increases the duty cycle of the PWM signal from 0 to 100 in increments
-	 //of 1% then resets to 0. Loop runs for 5 cycles.
+     //Loop increases the duty cycle of the PWM signal from 0 to 100 in increments
+     //of 1% then resets to 0. Loop runs for 5 cycles.
 
-	 printf("Increase PWM duty cycle from 1-100 in increments of 1%, repeat 5 times.. \n");
-	 for(int cycle = 5; cycle>0; ) {
-		 value = value + 0.01f;
-		 mraa_pwm_write(pwm, value);
-		 usleep(50000);
+     printf("Increase PWM duty cycle from 1-100 in increments of 1%, repeat 5 times.. \n");
+     for(int cycle = 5; cycle>0; ) {
+         value = value + 0.01f;
+         mraa_pwm_write(pwm, value);
+         usleep(50000);
 
-		 if (value >= 1.0f) {
-	            value = 0.0f;
-	            cycle --;
-	        }
-	    }
+         if (value >= 1.0f) {
+                value = 0.0f;
+                cycle --;
+            }
+        }
 
-	 mraa_pwm_enable(pwm, 0); //disable PWM signal
-	 printf("PWM signal OFF\n");
-	 delete pwm;
-	 printf("Exiting .. Bbye!\n");
-	 return 1;
+     mraa_pwm_enable(pwm, 0); //disable PWM signal
+     printf("PWM signal OFF\n");
+     delete pwm;
+     printf("Exiting .. Bbye!\n");
+     return 1;
 }

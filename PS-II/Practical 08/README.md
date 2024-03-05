@@ -11,9 +11,9 @@ Clustering is an unsupervised learning approach used to group similar data point
 
 Formally, clustering can be defined as follows:
 
-Given a dataset X = {x1, x2, ..., xn} where xi ∈ ℝ^d, the goal of clustering is to partition the dataset into K disjoint subsets, C = {C1, C2, ..., CK}, such that:
+Given a dataset $X = {x_1, x_2, ..., x_n}$ where $x_i ∈ ℝ^d$, the goal of clustering is to partition the dataset into K disjoint subsets, $C = {C_1, C_2, ..., C_K}$, such that:
 
-1. Each subset Ci contains similar data points.
+1. Each subset $C_i$ contains similar data points.
 2. The similarity between data points within the same cluster is maximized.
 3. The dissimilarity between data points in different clusters is minimized.
 
