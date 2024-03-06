@@ -32,5 +32,6 @@
 
 - [Index Format.pdf](./Index%20Format.pdf)
 - [Hardware Lab - Output Images](./Hardware%20Lab%20-%20Output%20Images.pdf)
+- [Hardware Lab - Code](./Hardware%20Lab%20-%20Code.pdf)
 
 - [Images](./images/)
