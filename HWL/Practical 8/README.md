@@ -2,6 +2,10 @@
 
 Aim: To interface sound sensor with Intel Galileo board and write a program to detect surrounding sound intensity.
 
+## Theory
+
+A sound sensor, often as a microphone, converts sound energy (vibrations in air pressure) into an electrical signal. This signal can then be processed or analyzed. The microphone, a type of sound sensor, is a transducer that converts sound waves into an electrical signal, which can then be amplified, transmitted, or recorded. The diaphragm in a microphone vibrates when sound waves hit it, causing a current to flow that corresponds to the sound's pressure, frequency, and amplitude.
+
 ## Procedure
 
 1. Connect the sound sensor to the analog pin 0 of the Galileo board.

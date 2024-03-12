@@ -2,6 +2,10 @@
 
 Aim: To interface touch sensor with Intel Galileo board and write a program to sense finger when placed on sensor.
 
+## Theory
+
+A touch sensor is an electronic device that can detect the presence and location of a touch or near-touch by a user. It converts the mechanical stress from the touch into an electrical signal that can be processed and interpreted by electronic devices. Touch sensors are widely used in various applications such as smartphones, tablets, automotive controls, and home appliances to provide a friendly control scheme and interface.
+
 ## Procedure
 
 1. Connect the touch sensor to the digital pin 4 of the Galileo board.

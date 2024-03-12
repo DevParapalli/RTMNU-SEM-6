@@ -38,6 +38,11 @@ add `%option noyywrap` at top of flex file
 - <http://alumni.cs.ucr.edu/~lgao/teaching/bison.html>
 - <https://www.cs.utexas.edu/users/novak/yaccpaper.htm> -- Check the solution for the parsing in LR 0 parsers.
 - <https://codeberg.org/alifara/3-addr-generator> - 3 Address Code Generator
+- <https://medium.com/@mirasma/creating-a-mini-c-compiler-using-lex-and-yacc-part-1-963b0860f5b1>
+- <https://www.codeproject.com/Tips/777508/Address-Code-Generator>
+- <https://cse.iitkgp.ac.in/~bivasm/notes/scribe/11CS30026.pdf>
+- <https://mohitkarekar.com/posts/2023/compiler-frontend/> -- Compiler in Rust using pest.rs
+- <https://gnuu.org/2009/09/18/writing-your-own-toy-compiler/>
 
 ## Practical Files
 
