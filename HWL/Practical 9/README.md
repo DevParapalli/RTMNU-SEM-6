@@ -2,6 +2,14 @@
 
 Aim: To interface LCD with Intel Galileo board and write a program to display any text.
 
+## Theory
+
+An LCD (Liquid Crystal Display) is a type of flat panel display that uses liquid crystals to create images and text. LCDs are commonly used in a variety of applications, including IoT (Internet of Things) devices and projects that use microcontrollers.
+
+In the context of IoT and microcontrollers, LCD displays are often used to provide a visual interface for users to interact with and receive information from the device. For example, an LCD display might be used on a smart home device to show the current temperature, or on a home security system to display the status of the system.
+
+LCD displays can be connected to a microcontroller using a variety of communication protocols, including I2C (Inter-Integrated Circuit). I2C is a two-wire communication protocol that allows multiple low-speed devices to be connected to a microcontroller using only two data lines. This makes it a popular choice for connections in IoT applications.
+
 ## Procedure
 
 1. Connect the LCD to the I2C port of the Galileo board.

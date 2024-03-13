@@ -2,6 +2,18 @@
 
 Aim: To interface Rotary Sensor with Intel Galileo board and write a program to display the rotation position.
 
+## Theory
+
+A Rotary Angle Sensor based on a potentiometer is a type of mechanical rotary angle sensor that measures the angular position of a shaft by converting the mechanical motion into an electrical signal using a potentiometer.
+
+The potentiometer consists of a resistive element, usually a strip of conductive material, with a sliding contact or wiper that moves along the resistive element as the shaft rotates. The resistive element has a known resistance, and the voltage divider principle is used to measure the angular position of the shaft.
+
+When the shaft rotates, the wiper moves along the resistive element, changing the resistance between the two ends of the potentiometer. The voltage at the wiper is proportional to the angular position of the shaft, and this voltage can be measured and converted to a digital signal using an analog-to-digital converter (ADC).
+
+Potentiometer-based rotary angle sensors are relatively simple and inexpensive, making them a popular choice for many applications. However, they have some limitations, such as a lower resolution and accuracy compared to other types of rotary angle sensors. Additionally, potentiometer-based sensors can wear out over time due to the mechanical movement of the wiper, leading to reduced accuracy and reliability.
+
+Potentiometer-based rotary angle sensors are commonly used in applications such as joysticks, volume controls, and position feedback systems. They are also used in industrial automation, robotics, and medical equipment. When selecting a potentiometer-based rotary angle sensor, it is essential to consider the application's specific requirements, such as the measurement range, resolution, accuracy, and environmental conditions.
+
 ## Procedure
 
 1. Connect the Rotary Sensor to the A1 port of the Galileo board.
