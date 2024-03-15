@@ -7,7 +7,6 @@
 
 - Gate Smasher Decision Trees : <https://youtu.be/CWzpomtLqqs?si=UfxGzyqwWXFg30Vd>
 
-
 ## PPTXs by Faculty
 
 - [Machine Learning Unit-1.1](./Machine%20Learning%20Unit-1.1.pptx)
@@ -15,3 +14,5 @@
 - [Machine Learning Unit-3.1](./Machine%20Learning%20Unit-3.1.pptx)
 - [Machine Learning Unit-3.2](./Machine%20Learning%20Unit-3.2.pptx)
 - [Machine Learning Unit-3.3](./Machine%20Learning%20Unit-3.3.pptx)
+
+## [Assignment 1 + 2](./Assignment%20Answers.md)
