@@ -47,7 +47,7 @@ Unsupervised learning finds hidden patterns and structures in unlabeled data wit
 
 ### Que3 What Are the Applications of Supervised Machine Learning in Modern Businesses?
 
-Some key applications of supervised machine learning in modern businesses include:
+<!-- Some key applications of supervised machine learning in modern businesses include: -->
 
 - Sales forecasting: Predicting future sales based on historical data, market trends, etc.
 - Customer churn prediction: Identifying customers likely to stop doing business, to enable proactive retention efforts
@@ -57,7 +57,7 @@ Some key applications of supervised machine learning in modern businesses includ
 - Predictive maintenance: Anticipating equipment failures to enable just-in-time maintenance and prevent unplanned downtime
 - Credit scoring: Estimating the risk of lending to a potential borrower
 
-Supervised learning excels at these kinds of prediction problems where there is labeled historical data to learn from.
+<!-- Supervised learning excels at these kinds of prediction problems where there is labeled historical data to learn from. -->
 
 ### Que4 What is Machine Learning? What are issues in Machine Learning? Explain.
 
@@ -75,11 +75,11 @@ Some key issues and challenges in machine learning include:
 
 - Deployment and monitoring: Deploying ML models into production environments and monitoring their performance over time introduces a host of engineering and operational challenges beyond just building an accurate model.
 
-Continued research aims to progressively address these issues and make ML more robust, efficient, and trustworthy.
+<!-- Continued research aims to progressively address these issues and make ML more robust, efficient, and trustworthy. -->
 
 ### Que5 What are basic types of Data in Machine Learning? Explain in detail.
 
-#### Basic Types of Data in Machine Learning
+<!-- #### Basic Types of Data in Machine Learning -->
 <!-- In the field of Machine Learning, understanding the different types of data is crucial for selecting appropriate algorithms, preprocessing techniques, and evaluation metrics. The question at hand is: "What are the basic types of data in Machine Learning? Explain in detail." -->
 
 Data can be broadly categorized into two main types: Qualitative and Quantitative. Each of these types can be further subdivided based on their characteristics and properties.
@@ -116,87 +116,72 @@ By correctly identifying and handling the different types of data, Machine Learn
 
 ### Que1 Explain KNN Algorithm with suitable example.
 
-The K-Nearest Neighbors (KNN) algorithm is a non-parametric supervised learning method used for classification and regression. It makes predictions based on the k most similar training examples in the feature space.
+The k-Nearest Neighbors (kNN) algorithm is a non-parametric, instance-based learning method used for classification and regression tasks in machine learning. It is a simple yet effective algorithm that relies on the principle of similarity between data points.
 
-Here's how the KNN algorithm works:
+#### How kNN Works
 
-1. Load the training and test data
-2. Choose the value of K (the number of nearest neighbors to consider)
-3. For each example in the test data:
-   - Calculate the distance between the test example and every training example (using a distance metric like Euclidean distance)
-   - Sort the training examples by ascending distance
-   - Take the K nearest neighbors
-   - For classification: return the majority class among the K neighbors
-   - For regression: return the mean value of the K neighbors
-4. Evaluate the model's performance on the test set
+The kNN algorithm works by finding the k most similar (nearest) data points to a given query point and then assigning the majority class (for classification) or the average value (for regression) of those k neighbors to the query point.
 
-Example: Predicting fruit type based on color and size
+The steps involved in the kNN algorithm are as follows:
 
-Imagine we have a dataset of fruits with features like color (represented numerically, e.g. 1 for red, 2 for green, 3 for yellow) and size (e.g. diameter in centimeters). Our task is to predict the type of fruit (apple, banana, etc.) for a new, unseen fruit based on its color and size.
+1. Choose the number of neighbors (k) and a distance metric (e.g., Euclidean, Manhattan, or Minkowski distance).
+2. Calculate the distance between the query point and all the data points in the training set.
+3. Sort the distances in ascending order and select the k nearest neighbors.
+4. For classification: Assign the majority class among the k nearest neighbors to the query point.
+   For regression: Assign the average value of the k nearest neighbors to the query point.
 
-To make a prediction for a new fruit with KNN:
+#### Example
 
-1. We calculate its distance to every fruit in our training set. 
-2. We identify the K fruits that are closest to it (its "nearest neighbors").
-3. We take a majority vote of the fruit types among these K neighbors.
-4. We assign the majority fruit type to the new fruit.
+Let's consider a simple example to illustrate how kNN works for classification. Suppose we have a dataset with two features (X1 and X2) and two classes (A and B). The dataset is as follows:
 
-So if the 5 nearest neighbors of a new fruit are 3 apples and 2 bananas, we would classify the new fruit as an apple (assuming K=5).
+| X1 | X2 | Class |
+|----|----|----|
+| 1  | 2  | A  |
+| 2  | 1  | A  |
+| 3  | 1  | B  |
+| 6  | 5  | B  |
+| 7  | 5  | B  |
 
-The choice of K is important - a small K can lead to noisy predictions, while a large K can lead to overly smooth boundaries between classes. The optimal K is typically chosen via cross-validation.
+Now, let's say we have a query point (4, 3) and we want to classify it using kNN with k=3 and Euclidean distance.
 
-KNN is simple to understand and implement, but can be computationally expensive for large datasets since it stores all the training data. It also struggles with high-dimensional data and irrelevant features.
+1. Calculate the Euclidean distance between the query point and all the data points:
+
+   $d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}$
+
+   - Distance to (1, 2): $\sqrt{(4-1)^2 + (3-2)^2} = 3.16$
+   - Distance to (2, 1): $\sqrt{(4-2)^2 + (3-1)^2} = 2.83$
+   - Distance to (3, 1): $\sqrt{(4-3)^2 + (3-1)^2} = 2.24$
+   - Distance to (6, 5): $\sqrt{(4-6)^2 + (3-5)^2} = 2.83$
+   - Distance to (7, 5): $\sqrt{(4-7)^2 + (3-5)^2} = 3.61$
+
+2. Sort the distances in ascending order and select the k=3 nearest neighbors:
+   - (3, 1) with distance 2.24, Class B
+   - (2, 1) with distance 2.83, Class A
+   - (6, 5) with distance 2.83, Class B
+
+3. The majority class among the 3 nearest neighbors is B (2 out of 3). Therefore, the query point (4, 3) is classified as class B.
+
+#### Advantages and Disadvantages
+
+Advantages of kNN:
+- Simple to understand and implement
+- No training phase required (lazy learning)
+- Can handle multi-class classification problems
+- Effective with small datasets
+
+Disadvantages of kNN:
+- Computationally expensive for large datasets (requires calculating distances to all data points)
+- Sensitive to the choice of k and distance metric
+- Sensitive to irrelevant features and feature scaling
+- Memory-intensive (stores all training data)
+
+<!-- In conclusion, the k-Nearest Neighbors algorithm is a simple and intuitive approach to classification and regression problems. It relies on the similarity between data points and assigns the majority class or average value of the k nearest neighbors to a query point. While it has its advantages, such as simplicity and effectiveness with small datasets, it also has limitations, particularly with large datasets and sensitivity to various factors. -->
 
 ### Que2 Explain SVM Algorithm in Detail.
 
-#### Answer 1
+Support Vector Machine (SVM) is a powerful supervised learning algorithm used for classification, regression, and outlier detection tasks. It aims to find the optimal hyperplane that maximally separates different classes in the feature space. SVMs are particularly effective in high-dimensional spaces and when the number of features is greater than the number of samples.
 
-Support Vector Machines (SVMs) are a powerful and versatile class of supervised learning algorithms used for classification, regression, and outlier detection. SVMs aim to find the hyperplane in an N-dimensional space that maximally separates data points of different classes.
-
-Key concepts in SVMs:
-
-- Hyperplane: A subspace of dimension N-1 that divides an N-dimensional space. In 2D, a hyperplane is a line; in 3D, it's a plane.
-- Support Vectors: The data points closest to the hyperplane, which influence its position and orientation. The distance between the support vectors and the hyperplane is called the margin.
-- Kernel: A function that transforms the input data into a higher-dimensional space where it may be linearly separable. This allows SVMs to model non-linear decision boundaries.
-
-The SVM algorithm works as follows:
-
-1. Map the training data into a high-dimensional feature space.
-2. Find the hyperplane that maximizes the margin between classes in this space.
-3. Choose the hyperplane that correctly separates most training examples (the optimal margin classifier).
-4. If no separating hyperplane exists, soften the margin to allow some misclassifications (using a regularization parameter C).
-5. Classify new examples based on which side of the hyperplane they fall.
-
-For non-linearly separable data, SVMs use the kernel trick. Instead of explicitly transforming the data to a high-dimensional space (which can be computationally expensive), a kernel function is used to compute the inner products between pairs of data points in the feature space. This allows the SVM to fit a linear hyperplane in the transformed space, which corresponds to a non-linear decision boundary in the original space.
-
-Some common kernel functions:
-
-- Linear: No transformation, used when data is linearly separable
-- Polynomial: Allows modeling feature interactions up to the specified degree
-- Radial Basis Function (RBF): Maps data to an infinite-dimensional space, can fit complex decision boundaries
-- Sigmoid: Equivalent to a two-layer neural network
-
-SVMs have several advantages:
-
-- Effective in high-dimensional spaces and when the number of dimensions exceeds the number of samples
-- Memory-efficient since they use a subset of training points (support vectors) 
-- Versatile due to different kernel functions
-- Robust to overfitting, especially with an RBF kernel
-
-However, SVMs can be sensitive to the choice of kernel and regularization parameters, and training can be slow for large datasets. They also don't directly provide probability estimates.
-
-Overall, SVMs are a powerful tool in the machine learning toolbox, particularly for complex but small- or medium-sized datasets.
-
-#### Answer 2
-
-<!-- # Support Vector Machine (SVM) Algorithm
-
-## Question
-Explain Support Vector Machine Algorithm in Detail. -->
-
-Support Vector Machine (SVM) is a supervised machine learning algorithm used for classification and regression tasks. It aims to find the optimal hyperplane that maximally separates the different classes in the feature space. SVMs are particularly effective in high-dimensional spaces and when the number of features is greater than the number of samples.
-
-##### Linear SVM
+#### Linear SVM
 In the simplest case, consider a binary classification problem with linearly separable data. Let the training dataset be $\{(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \ldots, (\mathbf{x}_n, y_n)\}$, where $\mathbf{x}_i \in \mathbb{R}^d$ is the feature vector and $y_i \in \{-1, 1\}$ is the corresponding class label.
 
 The goal of linear SVM is to find a hyperplane defined by the equation $\mathbf{w}^T\mathbf{x} + b = 0$, where $\mathbf{w}$ is the normal vector to the hyperplane and $b$ is the bias term. The optimal hyperplane maximizes the margin, which is the distance between the hyperplane and the closest data points from each class.
@@ -212,7 +197,7 @@ $$
 
 This is a convex quadratic optimization problem that can be solved using quadratic programming techniques. The data points that lie on the margin are called support vectors, and they determine the position and orientation of the hyperplane.
 
-##### Soft Margin SVM
+#### Soft Margin SVM
 In real-world scenarios, the data may not be perfectly linearly separable. Soft margin SVM allows for some misclassifications by introducing slack variables $\xi_i \geq 0$. The optimization problem becomes:
 
 $$
@@ -225,13 +210,31 @@ $$
 
 The parameter $C > 0$ controls the trade-off between maximizing the margin and minimizing the classification errors. A smaller $C$ allows for more misclassifications, while a larger $C$ enforces stricter classification.
 
-##### Kernel SVM
+#### Kernel SVM
 For non-linearly separable data, SVM can be extended using the kernel trick. The idea is to map the input features into a higher-dimensional space where the data becomes linearly separable. This is achieved by replacing the dot product $\mathbf{x}_i^T\mathbf{x}_j$ with a kernel function $K(\mathbf{x}_i, \mathbf{x}_j)$.
 
 Common kernel functions include:
 - Linear kernel: $K(\mathbf{x}_i, \mathbf{x}_j) = \mathbf{x}_i^T\mathbf{x}_j$
 - Polynomial kernel: $K(\mathbf{x}_i, \mathbf{x}_j) = (\gamma \mathbf{x}_i^T\mathbf{x}_j + r)^d$
-- Radial Basis Function (RBF) kernel: $K(\mathbf{x}_i, \mathbf{x}_j) = \exp(-\gamma \|\mathb
+- Radial Basis Function (RBF) kernel: $K(\mathbf{x}_i, \mathbf{x}_j) = \exp(-\gamma \|\mathbf{x}_i - \mathbf{x}_j\|^2)$
+
+The choice of kernel function depends on the problem at hand and the nature of the data. The RBF kernel is a popular choice as it can handle complex non-linear decision boundaries and has fewer hyperparameters compared to the polynomial kernel.
+
+#### Advantages and Disadvantages
+SVMs have several advantages:
+- Effective in high-dimensional spaces and when the number of dimensions exceeds the number of samples
+- Memory-efficient since they use a subset of training points (support vectors)
+- Versatile due to different kernel functions
+- Robust to overfitting, especially with an RBF kernel
+
+However, SVMs also have some disadvantages:
+- The choice of kernel and regularization parameters can significantly impact performance
+- Training can be slow for large datasets
+- They don't directly provide probability estimates
+
+#### Conclusion
+Support Vector Machines are a powerful and versatile class of supervised learning algorithms. They aim to find the optimal hyperplane that maximally separates different classes in the feature space. SVMs can handle both linearly separable and non-linearly separable data using the kernel trick. While they have many advantages, such as effectiveness in high-dimensional spaces and robustness to overfitting, they can be sensitive to the choice of kernel and regularization parameters, and training can be slow for large datasets. Overall, SVMs are a valuable tool in the machine learning toolbox, particularly for complex but small- or medium-sized datasets.
+
 
 ### Que3 What is a logistic regression? Explain with suitable example.
 
@@ -406,3 +409,89 @@ Step 4: Compare the posterior probabilities and classify the fruit.
 The probability of the fruit being an apple (0.5) is higher than the probability of it being a banana (0.0). Therefore, the Naïve Bayes classifier would classify this fruit as an apple.
 
 In this example, the Naïve Bayes algorithm assumes that the color and shape features are independent, which simplifies the calculations. In practice, the algorithm can handle more features and classes, and the probabilities are estimated from the training data.
+
+## Garbage
+
+#### Answer 1
+
+Support Vector Machines (SVMs) are a powerful and versatile class of supervised learning algorithms used for classification, regression, and outlier detection. SVMs aim to find the hyperplane in an N-dimensional space that maximally separates data points of different classes.
+
+Key concepts in SVMs:
+
+- Hyperplane: A subspace of dimension N-1 that divides an N-dimensional space. In 2D, a hyperplane is a line; in 3D, it's a plane.
+- Support Vectors: The data points closest to the hyperplane, which influence its position and orientation. The distance between the support vectors and the hyperplane is called the margin.
+- Kernel: A function that transforms the input data into a higher-dimensional space where it may be linearly separable. This allows SVMs to model non-linear decision boundaries.
+
+The SVM algorithm works as follows:
+
+1. Map the training data into a high-dimensional feature space.
+2. Find the hyperplane that maximizes the margin between classes in this space.
+3. Choose the hyperplane that correctly separates most training examples (the optimal margin classifier).
+4. If no separating hyperplane exists, soften the margin to allow some misclassifications (using a regularization parameter C).
+5. Classify new examples based on which side of the hyperplane they fall.
+
+For non-linearly separable data, SVMs use the kernel trick. Instead of explicitly transforming the data to a high-dimensional space (which can be computationally expensive), a kernel function is used to compute the inner products between pairs of data points in the feature space. This allows the SVM to fit a linear hyperplane in the transformed space, which corresponds to a non-linear decision boundary in the original space.
+
+Some common kernel functions:
+
+- Linear: No transformation, used when data is linearly separable
+- Polynomial: Allows modeling feature interactions up to the specified degree
+- Radial Basis Function (RBF): Maps data to an infinite-dimensional space, can fit complex decision boundaries
+- Sigmoid: Equivalent to a two-layer neural network
+
+SVMs have several advantages:
+
+- Effective in high-dimensional spaces and when the number of dimensions exceeds the number of samples
+- Memory-efficient since they use a subset of training points (support vectors) 
+- Versatile due to different kernel functions
+- Robust to overfitting, especially with an RBF kernel
+
+However, SVMs can be sensitive to the choice of kernel and regularization parameters, and training can be slow for large datasets. They also don't directly provide probability estimates.
+
+Overall, SVMs are a powerful tool in the machine learning toolbox, particularly for complex but small- or medium-sized datasets.
+
+#### Answer 2
+
+<!-- # Support Vector Machine (SVM) Algorithm
+
+## Question
+Explain Support Vector Machine Algorithm in Detail. -->
+
+Support Vector Machine (SVM) is a supervised machine learning algorithm used for classification and regression tasks. It aims to find the optimal hyperplane that maximally separates the different classes in the feature space. SVMs are particularly effective in high-dimensional spaces and when the number of features is greater than the number of samples.
+
+##### Linear SVM
+In the simplest case, consider a binary classification problem with linearly separable data. Let the training dataset be $\{(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \ldots, (\mathbf{x}_n, y_n)\}$, where $\mathbf{x}_i \in \mathbb{R}^d$ is the feature vector and $y_i \in \{-1, 1\}$ is the corresponding class label.
+
+The goal of linear SVM is to find a hyperplane defined by the equation $\mathbf{w}^T\mathbf{x} + b = 0$, where $\mathbf{w}$ is the normal vector to the hyperplane and $b$ is the bias term. The optimal hyperplane maximizes the margin, which is the distance between the hyperplane and the closest data points from each class.
+
+The optimization problem for finding the optimal hyperplane can be formulated as:
+
+$$
+\begin{align*}
+\min_{\mathbf{w}, b} \quad & \frac{1}{2} \|\mathbf{w}\|^2 \\
+\text{subject to} \quad & y_i(\mathbf{w}^T\mathbf{x}_i + b) \geq 1, \quad i = 1, \ldots, n
+\end{align*}
+$$
+
+This is a convex quadratic optimization problem that can be solved using quadratic programming techniques. The data points that lie on the margin are called support vectors, and they determine the position and orientation of the hyperplane.
+
+##### Soft Margin SVM
+In real-world scenarios, the data may not be perfectly linearly separable. Soft margin SVM allows for some misclassifications by introducing slack variables $\xi_i \geq 0$. The optimization problem becomes:
+
+$$
+\begin{align*}
+\min_{\mathbf{w}, b, \xi} \quad & \frac{1}{2} \|\mathbf{w}\|^2 + C \sum_{i=1}^n \xi_i \\
+\text{subject to} \quad & y_i(\mathbf{w}^T\mathbf{x}_i + b) \geq 1 - \xi_i, \quad i = 1, \ldots, n \\
+& \xi_i \geq 0, \quad i = 1, \ldots, n
+\end{align*}
+$$
+
+The parameter $C > 0$ controls the trade-off between maximizing the margin and minimizing the classification errors. A smaller $C$ allows for more misclassifications, while a larger $C$ enforces stricter classification.
+
+##### Kernel SVM
+For non-linearly separable data, SVM can be extended using the kernel trick. The idea is to map the input features into a higher-dimensional space where the data becomes linearly separable. This is achieved by replacing the dot product $\mathbf{x}_i^T\mathbf{x}_j$ with a kernel function $K(\mathbf{x}_i, \mathbf{x}_j)$.
+
+Common kernel functions include:
+- Linear kernel: $K(\mathbf{x}_i, \mathbf{x}_j) = \mathbf{x}_i^T\mathbf{x}_j$
+- Polynomial kernel: $K(\mathbf{x}_i, \mathbf{x}_j) = (\gamma \mathbf{x}_i^T\mathbf{x}_j + r)^d$
+- Radial Basis Function (RBF) kernel: $K(\mathbf{x}_i, \mathbf{x}_j) = \exp(-\gamma \|\mathb
