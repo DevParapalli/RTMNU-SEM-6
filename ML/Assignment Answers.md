@@ -181,6 +181,8 @@ Disadvantages of kNN:
 
 Support Vector Machine (SVM) is a powerful supervised learning algorithm used for classification, regression, and outlier detection tasks. It aims to find the optimal hyperplane that maximally separates different classes in the feature space. SVMs are particularly effective in high-dimensional spaces and when the number of features is greater than the number of samples.
 
+![SVM Diagram](./assignment%20-%20svm_image.png)
+
 #### Linear SVM
 In the simplest case, consider a binary classification problem with linearly separable data. Let the training dataset be $\{(\mathbf{x}_1, y_1), (\mathbf{x}_2, y_2), \ldots, (\mathbf{x}_n, y_n)\}$, where $\mathbf{x}_i \in \mathbb{R}^d$ is the feature vector and $y_i \in \{-1, 1\}$ is the corresponding class label.
 
