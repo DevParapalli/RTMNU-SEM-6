@@ -367,8 +367,8 @@ $$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}  $$
 
 where A and B are events and P(B) ≠ 0.
 
-- $P(A \vline B)$ is the posterior probability: the likelihood of event A occurring given that B is true.
-- $P(B \vline A)$ is the likelihood: the probability of observing event B given that A is true.
+- $P(A \vert B)$ is the posterior probability: the likelihood of event A occurring given that B is true.
+- $P(B \vert A)$ is the likelihood: the probability of observing event B given that A is true.
 - $P(A)$ is the prior probability: the probability of event A occurring.
 - $P(B)$ is the marginal probability: the probability of event B occurring.
 
@@ -391,21 +391,21 @@ $P(Apple) = 0.5$ (assuming equal probability for both classes)
 $P(Banana) = 0.5$
 
 Step 2: Calculate the likelihoods.
-$P(Red \vline Apple) = 1.0$ (all apples in the dataset are red)
-$P(Round \vline Apple) = 1.0$ (all apples in the dataset are round)
-$P(Yellow \vline Banana) = 1.0$ (all bananas in the dataset are yellow)
-$P(Elongated \vline Banana) = 1.0$ (all bananas in the dataset are elongated)
+$P(Red \vert Apple) = 1.0$ (all apples in the dataset are red)
+$P(Round \vert Apple) = 1.0$ (all apples in the dataset are round)
+$P(Yellow \vert Banana) = 1.0$ (all bananas in the dataset are yellow)
+$P(Elongated \vert Banana) = 1.0$ (all bananas in the dataset are elongated)
 
 Step 3: Apply Bayes' theorem to calculate the posterior probabilities.
 
-$$ P(Apple \vline  Red, Round) = \frac{P(Red|Apple) × P(Round|Apple) × P(Apple)}{P(Red, Round)}$$
+$$ P(Apple \vert  Red, Round) = \frac{P(Red|Apple) × P(Round|Apple) × P(Apple)}{P(Red, Round)}$$
 
-$$ P(Banana \vline Red, Round) = \frac{P(Red|Banana) × P(Round|Banana) × P(Banana)}{P(Red, Round)} $$
+$$ P(Banana \vert Red, Round) = \frac{P(Red|Banana) × P(Round|Banana) × P(Banana)}{P(Red, Round)} $$
 
 Since the denominator $P(Red, Round)$ is the same for both classes, we can ignore it for comparison purposes.
 
-$$P(Apple \vline Red, Round) ∝ 1.0 × 1.0 × 0.5 = 0.5$$
-$$P(Banana \vline Red, Round) ∝ 0.0 × 0.0 × 0.5 = 0.0$$
+$$P(Apple \vert Red, Round) ∝ 1.0 × 1.0 × 0.5 = 0.5$$
+$$P(Banana \vert Red, Round) ∝ 0.0 × 0.0 × 0.5 = 0.0$$
 
 <sup>∝ is proportionality</sup>
 
