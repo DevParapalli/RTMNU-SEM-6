@@ -367,8 +367,8 @@ $$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}  $$
 
 where A and B are events and P(B) ≠ 0.
 
-- $P(A|B)$ is the posterior probability: the likelihood of event A occurring given that B is true.
-- $P(B|A)$ is the likelihood: the probability of observing event B given that A is true.
+- $P(A \vline B)$ is the posterior probability: the likelihood of event A occurring given that B is true.
+- $P(B \vline A)$ is the likelihood: the probability of observing event B given that A is true.
 - $P(A)$ is the prior probability: the probability of event A occurring.
 - $P(B)$ is the marginal probability: the probability of event B occurring.
 

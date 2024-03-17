@@ -7,6 +7,9 @@
 
 - Gate Smasher Decision Trees : <https://youtu.be/CWzpomtLqqs?si=UfxGzyqwWXFg30Vd>
 
+- Logistic Regression - <https://maximilianrohde.com/posts/logistic-regresstion-by-hand/>
+- Logistic Regression - <https://www.analyticsvidhya.com/blog/2021/08/conceptual-understanding-of-logistic-regression-for-data-science-beginners/>
+
 ## PPTXs by Faculty
 
 - [Machine Learning Unit-1.1](./Machine%20Learning%20Unit-1.1.pptx)
