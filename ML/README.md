@@ -15,4 +15,4 @@
 - [Machine Learning Unit-3.2](./Machine%20Learning%20Unit-3.2.pptx)
 - [Machine Learning Unit-3.3](./Machine%20Learning%20Unit-3.3.pptx)
 
-## [Assignment 1 + 2](./Assignment%20Answers.md)
+## [Assignment 1 + 2](./Assignment%20Answers)
