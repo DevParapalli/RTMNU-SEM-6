@@ -405,8 +405,9 @@ $$ P(Banana \vert Red, Round) = \frac{P(Red|Banana) × P(Round|Banana) × P(Bana
 Since the denominator $P(Red, Round)$ is the same for both classes, we can ignore it for comparison purposes.
 
 $$P(Apple \vert Red, Round) ∝ 1.0 × 1.0 × 0.5 = 0.5$$
-$$P(Banana \vert Red, Round) ∝ 0.0 × 0.0 × 0.5 = 0.0$$
 
+$$P(Banana \vert Red, Round) ∝ 0.0 × 0.0 × 0.5 = 0.0$$
+ 
 <sup>∝ is proportionality</sup>
 
 Step 4: Compare the posterior probabilities and classify the fruit.
