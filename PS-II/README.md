@@ -11,6 +11,7 @@
 7. [Classification Model](./Practical%2007/)
 8. [Clustering Model](./Practical%2008/)
 9. [K-Nearest Neighbour](./Practical%2009/)
+10. [K-means Clustering](./Practical%2010/)
 
 ## Practical Files
 
