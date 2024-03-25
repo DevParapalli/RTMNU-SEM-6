@@ -14,6 +14,11 @@ $$d(x_{i}, x_{l}) = \sqrt{(x_{i1} - x_{l1})^2 + (x_{i2} - x_{l2})^2 + ... + (x_{
 
 Sometimes other measures can be more suitable for a given setting and include the Manhattan, Chebyshev and Hamming distance.
 
+## Datasets Used
+
+- <https://www.kaggle.com/uciml/iris> - iris.csv
+    columns: SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm, Species
+
 ## Output Images
 
 ![main.png](./main.png)

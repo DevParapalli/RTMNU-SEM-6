@@ -14,8 +14,11 @@
 
 - [Machine Learning Unit-1.1](./Machine%20Learning%20Unit-1.1.pptx)
 - [Machine Learning Unit-1.2](./Machine%20Learning%20Unit-1.2.pptx)
+- [Machine Learning Unit-2](./Machine%20Learning%20Unit-2.pptx)
 - [Machine Learning Unit-3.1](./Machine%20Learning%20Unit-3.1.pptx)
 - [Machine Learning Unit-3.2](./Machine%20Learning%20Unit-3.2.pptx)
 - [Machine Learning Unit-3.3](./Machine%20Learning%20Unit-3.3.pptx)
+- [Machine Learning Unit-4.1](./Machine%20Learning%20Unit-4.1.pptx)
+- [Machine Learning Unit-4.2](./Machine%20Learning%20Unit-4.2.pptx)
 
 ## [Assignment 1 + 2](./Assignment%20Answers)

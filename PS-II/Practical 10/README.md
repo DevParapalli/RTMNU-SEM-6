@@ -42,3 +42,22 @@ $$\boldsymbol{\mu}_k = \frac{1}{|\mathcal{C}_k|} \sum_{\mathbf{x} \in \mathcal{C
 The time complexity of the K-means algorithm is $\mathcal{O}(N \times K \times I \times d)$, where $N$ is the number of data points, $K$ is the number of clusters, $I$ is the number of iterations, and $d$ is the dimensionality of the data.
 
 The convergence is guaranteed to a local optimum, but the final clustering may depend on the initial centroid positions. To mitigate this, multiple runs with different initializations can be performed, and the solution with the lowest objective function value can be chosen.
+
+## Datasets Used
+
+- <https://www.kaggle.com/uciml/iris> - iris.csv
+    columns: SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm, Species
+
+## Practical Files
+
+- [main.py](./main.py)
+- @[iris.csv](./iris.csv)
+- *[a.png](./a.png)
+- *[b.png](./b.png)
+- *[c.png](./c.png)
+
+## Output Images
+
+![a.png](./a.png)
+![b.png](./b.png)
+![c.png](./c.png)
