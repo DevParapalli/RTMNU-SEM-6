@@ -56,6 +56,9 @@ The convergence is guaranteed to a local optimum, but the final clustering may d
 - *[b.png](./b.png)
 - *[c.png](./c.png)
 
+- [code.pdf](./code.pdf)
+- [output.pdf](./output.pdf)
+
 ## Output Images
 
 ![a.png](./a.png)
