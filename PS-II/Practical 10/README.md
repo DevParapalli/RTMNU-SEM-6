@@ -58,6 +58,8 @@ The convergence is guaranteed to a local optimum, but the final clustering may d
 
 - [code.pdf](./code.pdf)
 - [output.pdf](./output.pdf)
+- [merged.pdf](./merged.pdf)
+- [final.pdf](./final.pdf)
 
 ## Output Images
 
