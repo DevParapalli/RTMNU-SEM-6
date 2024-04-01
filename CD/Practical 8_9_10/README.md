@@ -64,6 +64,8 @@ Some optimization techniques that can be applied to TAC include:
 
 ### Aim
 
+Write a C program for selection sort and generate object code for three address code.
+
 ### Theory
 
 Three-address code is a type of intermediate representation (IR) used in compilers, where each instruction has at most three operands and one operator.The exact procedure for converting three-address code into two-address or one-address code will depend on the specific IR and target architecture. However, here is a general outline of the procedure:
