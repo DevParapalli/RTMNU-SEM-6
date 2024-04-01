@@ -1,62 +1,88 @@
-; selectionSort function
 selectionSort:
-    push ebp                    ; Save base pointer
-    mov ebp, esp                ; Set up new base pointer
-    sub esp, 8                  ; Allocate space for two local variables
-
-    mov eax, [ebp + 8]          ; eax = n
-    dec eax                     ; eax = n - 1
-    mov [ebp - 4], eax          ; t1 = n - 1
-
-    xor ecx, ecx                ; i = 0
-outer_loop:
-    mov [ebp - 8], ecx          ; min_idx = i
-    mov edx, ecx                ; j = i
-inner_loop:
-    inc edx                     ; j++
-    cmp edx, [ebp + 8]          ; j < n?
-    jge end_inner_loop          ; If not, jump to end_inner_loop
-
-    mov eax, edx                ; eax = j
-    shl eax, 2                  ; eax = j * 4 (size of int)
-    cmp [eax], [ebp - 8]        ; arr[j] < arr[min_idx]?
-    jge inner_loop              ; If not, jump to inner_loop
-
-    mov [ebp - 8], edx          ; min_idx = j
-    jmp inner_loop              ; Jump to inner_loop
-end_inner_loop:
-
-    mov eax, [ebp - 8]          ; eax = min_idx
-    shl eax, 2                  ; eax = min_idx * 4
-    mov edx, [eax]              ; edx = arr[min_idx]
-
-    mov eax, ecx                ; eax = i
-    shl eax, 2                  ; eax = i * 4
-    mov ebx, [eax]              ; ebx = arr[i]
-
-    mov eax, [ebp - 8]          ; eax = min_idx
-    shl eax, 2                  ; eax = min_idx * 4
-    mov [eax], ebx              ; arr[min_idx] = arr[i]
-
-    mov eax, ecx                ; eax = i
-    shl eax, 2                  ; eax = i * 4
-    mov [eax], edx              ; arr[i] = temp
-
-    inc ecx                     ; i++
-    cmp ecx, [ebp - 4]          ; i <= t1?
-    jle outer_loop              ; If so, jump to outer_loop
-
-    mov esp, ebp                ; Restore stack pointer
-    pop ebp                     ; Restore base pointer
-    ret                         ; Return from function
-
-; main function
+	pushq %rbp
+	movq %rsp, %rbp
+	movq %rdi, - 24(%rbp)        ; arr
+	movl %esi, - 28(%rbp)        ; n
+	movl $0, - 4(%rbp)           ; i = 0
+	jmp .L1
+.L1:
+	movl - 4(%rbp), %eax
+	cmpl - 28(%rbp), %eax        ; i cmp n - 1
+	jge .L6
+	movl - 4(%rbp), %eax         ; min_idx = i
+	movl %eax, - 8(%rbp)
+	movl - 4(%rbp), %eax
+	addl $1, %eax                ; j = i + 1
+	movl %eax, - 12(%rbp)
+	movl - 4(%rbp), %eax
+	cltq
+	leaq 0(, %rax, 4), %rdx      ; t1 = i * sizeof(int)
+	movq - 24(%rbp), %rax
+	addq %rdx, %rax              ; t2 = arr + t1
+	movl (%rax), %eax            ; t6 = * t2
+	movl %eax, - 16(%rbp)
+.L2:
+	movl - 12(%rbp), %eax
+	cmpl - 28(%rbp), %eax        ; j cmp n
+	jge .L5
+	movl - 12(%rbp), %eax
+	cltq
+	leaq 0(, %rax, 4), %rdx      ; t3 = j * sizeof(int)
+	movq - 24(%rbp), %rax
+	addq %rdx, %rax              ; t4 = arr + t3
+	movl (%rax), %eax            ; t5 = * t4
+	cmpl %eax, - 16(%rbp)        ; t5 cmp t6
+	jle .L4
+	movl - 12(%rbp), %eax        ; min_idx = j
+	movl %eax, - 8(%rbp)
+	movl (%rax), %eax            ; t6 = t5
+	movl %eax, - 16(%rbp)
+.L4:
+	addl $1, - 12(%rbp)          ; j = j + 1
+	jmp .L2
+.L5:
+	movl - 8(%rbp), %eax
+	cltq
+	leaq 0(, %rax, 4), %rdx      ; t7 = min_idx * sizeof(int)
+	movq - 24(%rbp), %rax
+	addq %rdx, %rax              ; t8 = arr + t7
+	movl (%rax), %eax            ; temp = * t8
+	movl %eax, - 20(%rbp)
+	movl - 4(%rbp), %eax
+	cltq
+	leaq 0(, %rax, 4), %rdx      ; t1 = i * sizeof(int)
+	movq - 24(%rbp), %rax
+	addq %rdx, %rax              ; t2 = arr + t1
+	movl - 16(%rbp), %edx
+	movl %edx, (%rax)            ; * t2 = * t8
+	movl - 8(%rbp), %eax
+	cltq
+	leaq 0(, %rax, 4), %rdx      ; t7 = min_idx * sizeof(int)
+	movq - 24(%rbp), %rax
+	addq %rdx, %rax              ; t8 = arr + t7
+	movl - 20(%rbp), %edx
+	movl %edx, (%rax)            ; * t8 = temp
+	addl $1, - 4(%rbp)           ; i = i + 1
+	jmp .L1
+.L6:
+	nop
+	popq %rbp
+	ret
+	
 main:
-    mov dword [0x00000000], 64  ; arr[0] = 64
-    mov dword [0x00000004], 25  ; arr[1] = 25
-    mov dword [0x00000008], 12  ; arr[2] = 12
-    mov dword [0x0000000C], 22  ; arr[3] = 22
-    push 4                      ; Push n (4) onto the stack
-    push 0x00000000             ; Push address of arr onto the stack
-    call selectionSort          ; Call selectionSort function
-    ; Array is now sorted in-place
+	pushq %rbp
+	movq %rsp, %rbp
+	subq $32, %rsp
+	movl $64, - 32(%rbp)
+	movl $25, - 28(%rbp)
+	movl $12, - 24(%rbp)
+	movl $22, - 20(%rbp)
+	movl $4, - 4(%rbp)           ; n = 4
+	leaq - 32(%rbp), %rax        ; arr = &64
+	movl - 4(%rbp), %edx
+	movl %edx, %esi              ; push n
+	movq %rax, %rdi              ; push arr
+	call selectionSort
+	movl $0, %eax
+	leave
+	ret

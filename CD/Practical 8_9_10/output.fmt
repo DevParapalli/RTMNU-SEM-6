@@ -1,26 +1,39 @@
-// selectionSort function
-t1 = n - 1
-for i = 0 to t1:
+selectionSort:
+    i = 0
+L1: if i >= n - 1 goto L6
     min_idx = i
-    t2 = i + 1
-    for j = t2 to n:
-        t3 = arr[j] < arr[min_idx]
-        if t3 == 1:
-            min_idx = j
-    t4 = arr[min_idx]
-    t5 = arr[i]
-    arr[min_idx] = t5
-    arr[i] = t4
+    j = i + 1
+L2: if j >= n goto L5
+    t1 = j * sizeof(int)
+    t2 = arr + t1
+    t3 = *t2
+    t4 = min_idx * sizeof(int)
+    t5 = arr + t4
+    t6 = *t5
+    if t3 >= t6 goto L4
+    min_idx = j
+L4: j = j + 1
+    goto L2
+L5: t7 = min_idx * sizeof(int)
+    t8 = arr + t7
+    temp = *t8
+    t9 = i * sizeof(int)
+    t10 = arr + t9
+    *t8 = *t10
+    *t10 = temp
+    i = i + 1
+    goto L1
+L6: return
 
-// main function
-t6 = 64
-t7 = 25
-t8 = 12
-t9 = 22
-arr[0] = t6
-arr[1] = t7
-arr[2] = t8
-arr[3] = t9
-t10 = 4
-n = t10
-call selectionSort(arr, n)
+main:
+    n = 4
+    t11 = &64
+    arr = t11
+    t12 = &25
+    *(arr + sizeof(int)) = t12
+    t13 = &12
+    *(arr + 2 * sizeof(int)) = t13
+    t14 = &22
+    *(arr + 3 * sizeof(int)) = t14
+    call selectionSort
+    return 0

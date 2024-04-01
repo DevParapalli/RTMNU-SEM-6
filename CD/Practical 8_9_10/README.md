@@ -84,7 +84,6 @@ These steps can be automated using various compiler optimization techniques, suc
 - *[output2.fmt](./output2.fmt) -- Optimized Code
 - *[output3.fmt](./output3.fmt) -- Machine Code (Assembly)
 
-
 ## Printables
 
 - @[Code_Output.pdf](./Code_Output.pdf)
