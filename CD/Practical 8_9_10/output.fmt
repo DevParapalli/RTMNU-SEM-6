@@ -1,0 +1,26 @@
+// selectionSort function
+t1 = n - 1
+for i = 0 to t1:
+    min_idx = i
+    t2 = i + 1
+    for j = t2 to n:
+        t3 = arr[j] < arr[min_idx]
+        if t3 == 1:
+            min_idx = j
+    t4 = arr[min_idx]
+    t5 = arr[i]
+    arr[min_idx] = t5
+    arr[i] = t4
+
+// main function
+t6 = 64
+t7 = 25
+t8 = 12
+t9 = 22
+arr[0] = t6
+arr[1] = t7
+arr[2] = t8
+arr[3] = t9
+t10 = 4
+n = t10
+call selectionSort(arr, n)

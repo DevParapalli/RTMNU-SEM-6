@@ -32,6 +32,7 @@ add `%option noyywrap` at top of flex file
 5. [Design recursive descent parser for grammar `E:+EE|-EE|a|b`](./Practical%2005/)
 6. [Design a program for basic calculator using yacc or bison](./Practical%2006/)
 7. [Write a program to evaluate postfix expression](./Practical%2007/)
+8. [Practical 08, Practical 09, Practical 10](./Practical%208_9_10/)
 
 ## Useful Links
 
